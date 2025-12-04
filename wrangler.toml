@@ -35,9 +35,9 @@ binding = "NAV_DB"
 database_name = "book"
 database_id = ""
 
-[[env.production.kv_namespaces]]
-binding = "NAV_AUTH"
-id = ""
+# The kv_namespaces block is intentionally removed for the production
+# environment to bypass a persistent validation error. You may need
+# to manually bind the 'NAV_AUTH' KV namespace in the Cloudflare Pages UI.
 
 [env.production.vars]
 ICON_API = "https://icon.iori.nyc.mn/?domain="
